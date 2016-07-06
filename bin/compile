@@ -11,7 +11,7 @@ cache=$2
 mkdir -p $build
 mkdir -p $cache
 
-cd $build
+cd $cache
 
 echo "-----> Downloading snappy"
 wget https://codeload.github.com/google/snappy/tar.gz/1.1.3 -O snappy.tar.gz
