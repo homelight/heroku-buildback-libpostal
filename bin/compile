@@ -24,7 +24,7 @@ make install
 cd -
 echo "-----> Downloading libpostal"
 
-git clone https://github.com/openvenues/libpostal --max-depth 1
+git clone https://github.com/openvenues/libpostal --depth 1
 cd libpostal/
 ./bootstrap.sh
 LDFLAGS="-L/app/vendor/lib" CFLAGS="-I/app/vendor/include" PKG_CONFIG_PATH="/app/vendor/lib/pkgconfig" ./configure --prefix=/app/vendor/ --datadir=/app/vendor
