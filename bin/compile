@@ -31,5 +31,3 @@ LDFLAGS="-L/app/vendor/lib" CFLAGS="-I/app/vendor/include" PKG_CONFIG_PATH="/app
 cp ~/vendor/include/snappy* .
 make
 make install
-export LDFLAGS="-L/app/vendor/lib"
-export CFLAGS="-I/app/vendor/include" 
