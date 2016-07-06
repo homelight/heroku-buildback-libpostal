@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+
+
+set -e
+
+
+echo "-----> Downloading snappy"
+wget https://codeload.github.com/google/snappy/tar.gz/1.1.3 -O snappy.tar.gz
+tar -zxvf snappy.tar.gz
+cd snappy-1.1.3
+./configure --prefix=/app/vendor
+make
+make install
+cd -
+echo "-----> Downloading libpostal"
+
+git clone https://github.com/openvenues/libpostal
+cd libpostal/
+LDFLAGS="-L/app/vendor/lib" CFLAGS="-I/app/vendor/include" PKG_CONFIG_PATH="/app/vendor/lib/pkgconfig" ./configure --prefix=/app/vendor/ --datadir=/app/vendor
+cp ~/vendor/include/snappy* .
+make
+make install
