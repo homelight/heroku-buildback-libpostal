@@ -23,6 +23,3 @@ LDFLAGS="-L/app/vendor/lib" CFLAGS="-I/app/vendor/include" PKG_CONFIG_PATH="/app
 cp ~/vendor/include/snappy* .
 make
 make install
-cd
-ln -vs /app/vendor/include/* /app/vendor/ruby-2.2.2/include
-ln -vs /app/vendor/lib/* /app/vendor/ruby-2.2.2/lib/
