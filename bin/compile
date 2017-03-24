@@ -31,3 +31,4 @@ LDFLAGS="-L$build/lib" CFLAGS="-I$buildinclude" PKG_CONFIG_PATH="$build/lib/pkgc
 cp ~/vendor/include/snappy* .
 make
 make install
+make install
