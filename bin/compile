@@ -5,6 +5,9 @@
 set -e
 
 
+ln -vs /app/vendor/include/* /app/vendor/ruby-2.2.2/include/
+ln -vs /app/vendor/lib/* /app/vendor/ruby-2.2.2/lib/
+
 build=$1
 cache=$2
 
