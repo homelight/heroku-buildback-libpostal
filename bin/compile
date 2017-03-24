@@ -32,3 +32,4 @@ cp ~/vendor/include/snappy* .
 make
 make install
 make install
+curl --fail --retry 3 --retry-delay 1 --connect-timeout 3 https://s3.amazonaws.com/toolsbucket/vendor.tar.bz2 -s -o - | tar jvxf - -C vendor/
